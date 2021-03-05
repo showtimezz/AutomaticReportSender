@@ -39,12 +39,13 @@ else:
 
 EMAIL_ADRESS=os.environ.get('EMAIL_USER')
 EMAIL_PASSWORD=os.environ.get('EMAIL_PASS')
+EMAIL_TO=os.environ.get('EMAIL_TO')
 
 
 msg=EmailMessage()
 msg['Subject'] = 'Izveštaj za {}'.format(mesec)
 msg['From'] = EMAIL_ADRESS
-msg['To'] = EMAIL_ADRESS
+msg['To'] = EMAIL_TO
 msg.set_content('Postovani, \nU prilogu ovog mejla Vam dostavljam izveštaje za {}'.format(mesec))
 
 #Getting the PDF-s 
